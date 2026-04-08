@@ -1,4 +1,4 @@
-package org.example.HW_FirstJavaProgram;
+package org.example.module.expressJava.firstJavaProgram;
 
 public class MathOperations {
 
