@@ -21,7 +21,7 @@ public class MathOperations {
         return x * y;
     }
 
-    public static double divide(int x, int y) {
+    public static double divide(double x, double y) {
         return x / y;
     }
 
@@ -66,12 +66,12 @@ public class MathOperations {
     }
 
     /**
-     * возвращает количество минут (целых или дробных).
+     * Возвращает количество минут (целых или дробных).
      * @param seconds
      * @return
      */
-    public static int convertSecondsToMinutes(int seconds) {
-        return seconds / 60;
+    public static double convertSecondsToMinutes(int seconds) {
+        return seconds / 60.0;
     }
 
     /**
@@ -115,7 +115,7 @@ public class MathOperations {
      */
     public static double calculatePercentage(double total, double part) {
         if (total <= 0) {
-            throw new IllegalArgumentException("Аргумент долженб быть больше 0");
+            throw new IllegalArgumentException("Аргумент должен быть больше 0");
         }
 
         return (part / total) * 100;
