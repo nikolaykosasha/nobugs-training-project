@@ -10,11 +10,11 @@ int currentPlayers — сколько игроков в игре сейчас Р
 public class GameSettings {
     static int maxPlayers;
     final String gameName;
-    private int currentPlayer;
+    private int currentPlayers;
 
     public GameSettings(String gameName, int currentPlayer) {
         this.gameName = gameName;
-        this.currentPlayer = currentPlayer;
+        this.currentPlayers = currentPlayer;
     }
 
     public static void setMaxPlayers(int maxPlayers) {
@@ -22,12 +22,12 @@ public class GameSettings {
     }
 
     public void addPlayer() {
-        currentPlayer = currentPlayer++;
+        currentPlayers++;
     }
 
     public void printGameStatus() {
         System.out.println("Название игры: " + gameName);
-        System.out.println("Текущее количество игроков: " + currentPlayer);
+        System.out.println("Текущее количество игроков: " + currentPlayers);
         System.out.println("Максимальное количество игроков: " + maxPlayers);
     }
 

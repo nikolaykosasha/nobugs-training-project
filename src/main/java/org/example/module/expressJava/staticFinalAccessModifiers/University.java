@@ -8,7 +8,7 @@ String studentName Реализуйте конструктор для studentID 
 В main: создайте 3 студента, измените название университета и выведите данные.
  */
 public class University {
-    static String universityName;
+    private static String universityName;
     final int studentID;
     String studentName;
 

@@ -29,7 +29,7 @@ public class Company {
         this.employeeName = employeeName;
     }
 
-    public void printCompanyName() {
+    public static void printCompanyName() {
         System.out.println(companyName);
     }
 }

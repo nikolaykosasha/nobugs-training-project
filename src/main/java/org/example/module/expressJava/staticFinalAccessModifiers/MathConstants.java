@@ -8,8 +8,8 @@ package org.example.module.expressJava.staticFinalAccessModifiers;
 — расчет по формуле экспоненциального роста:
  */
 public class MathConstants {
-    final static double PI = 3.14159;
-    final static double E = 2.71828;
+    static final double PI = 3.14159;
+    static final double E = 2.71828;
 
     public static double calculateCircleArea(double r) {
         return MathConstants.PI * (r * r);
