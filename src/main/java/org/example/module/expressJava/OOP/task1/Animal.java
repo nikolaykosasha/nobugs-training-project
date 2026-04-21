@@ -1,6 +1,6 @@
-package org.example.module.expressJava.OOP.ZOO;
+package org.example.module.expressJava.OOP.task1;
 
-public class Animal implements Zoo{
+public abstract class Animal implements Behavaviorable {
 
     public void sound() {
         System.out.println("Звук");

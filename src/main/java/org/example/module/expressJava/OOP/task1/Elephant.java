@@ -1,4 +1,4 @@
-package org.example.module.expressJava.OOP.ZOO;
+package org.example.module.expressJava.OOP.task1;
 
 public class Elephant extends Animal {
     @Override
