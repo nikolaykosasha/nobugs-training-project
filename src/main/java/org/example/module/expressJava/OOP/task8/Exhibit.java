@@ -1,6 +1,6 @@
 package org.example.module.expressJava.OOP.task8;
 
-public class Exhibit {
+public abstract class Exhibit {
     private String name;
 
     public Exhibit(String name) {
