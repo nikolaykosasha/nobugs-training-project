@@ -10,10 +10,7 @@ public class Garden {
     }
 
     public void addPlant(Plant plant) {
-
-        if (this.plant == null) {
-            this.plant = plant;
-        }
+        this.plant = plant;
     }
 
     public void maintenance() {

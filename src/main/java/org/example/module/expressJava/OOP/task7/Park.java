@@ -9,7 +9,7 @@ public class Park {
     }
 
     public void conditionRides(Attraction attraction) {
-        attraction.getName();
+        System.out.println(attraction.getName());
         attraction.properties();
     }
 

@@ -11,6 +11,6 @@ public class Main {
         menu.addMenu(cocacola);
         menu.addMenu(pasta);
 
-        menu.printMenu(pasta);
+        menu.printMenu();
     }
 }

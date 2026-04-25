@@ -12,7 +12,9 @@ public class Menu {
         menu.add(dish);
     }
 
-    public void printMenu(Dish dish) {
-        dish.print();
+    public void printMenu() {
+        for (Dish m : menu){
+            m.print();
+        }
     }
 }

@@ -10,10 +10,10 @@ public class Main {
 
         zoo.addAnimal(bird);
 
-        zoo.psentBehavior();
+        zoo.presentBehavior();
 
         zoo.addAnimal(elephant);
-        zoo.psentBehavior();
+        zoo.presentBehavior();
     }
 
 
