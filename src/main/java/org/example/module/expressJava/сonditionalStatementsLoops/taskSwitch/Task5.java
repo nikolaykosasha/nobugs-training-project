@@ -1,6 +1,6 @@
 package org.example.module.expressJava.сonditionalStatementsLoops.taskSwitch;
 
-//import org.example.module.expressJava.firstJavaProgram.MathOperations;
+import org.example.module.expressJava.firstJavaProgram.MathOperations;
 
 import java.util.Scanner;
 
