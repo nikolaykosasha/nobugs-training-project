@@ -31,5 +31,7 @@ public class University {
         System.out.println("Университет: " + universityName);
     }
 
-
+    public static void setUniversityName(String universityName) {
+        University.universityName = universityName;
+    }
 }
