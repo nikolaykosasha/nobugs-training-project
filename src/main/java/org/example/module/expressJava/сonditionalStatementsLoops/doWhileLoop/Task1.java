@@ -7,10 +7,11 @@ public class Task1 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите число: ");
-        int number = scanner.nextInt();
+        int number;
 
         do {
             number = scanner.nextInt();
         } while (number <= 0);
+        System.out.println("Ввели: " + number);
     }
 }

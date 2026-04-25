@@ -13,7 +13,6 @@ public class Task2 {
 
         for (int i = 1; i <= number; i++) {
             sum = sum + i;
-            System.out.println(sum);
         }
 
         System.out.println(sum);

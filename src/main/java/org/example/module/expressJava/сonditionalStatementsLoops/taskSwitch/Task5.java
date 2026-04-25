@@ -1,6 +1,6 @@
 package org.example.module.expressJava.сonditionalStatementsLoops.taskSwitch;
 
-import org.example.module.expressJava.firstJavaProgram.MathOperations;
+//import org.example.module.expressJava.firstJavaProgram.MathOperations;
 
 import java.util.Scanner;
 
@@ -13,17 +13,18 @@ public class Task5 {
         int numberB = scanner.nextInt();
         String operator = scanner.next();
 
-
-        if (numberB != 0) {
-            switch (operator) {
-                case "+" -> System.out.println(MathOperations.add(numberA, numberB));
-                case "-" -> System.out.println(MathOperations.subtract(numberA, numberB));
-                case "*" -> System.out.println(MathOperations.multiply(numberA, numberB));
-                case "/" -> System.out.println(MathOperations.divide(numberA, numberB));// Java автоматически приведет к double
-                default -> System.out.println("Нет оператора");
+        switch (operator) {
+            case "+" -> System.out.println(MathOperations.add(numberA, numberB));
+            case "-" -> System.out.println(MathOperations.subtract(numberA, numberB));
+            case "*" -> System.out.println(MathOperations.multiply(numberA, numberB));
+            case "/" -> {
+                if (numberB == 0) {
+                    System.out.println("Ошибка: деление на 0 невозможно");
+                } else {
+                    System.out.println(MathOperations.divide(numberA, numberB)); // Java автоматически приведет к double
+                }
             }
+            default -> System.out.println("Нет оператора");
         }
-
-
     }
 }

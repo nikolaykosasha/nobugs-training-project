@@ -7,10 +7,12 @@ public class Task4 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите exit: ");
 
-        String stringIn = scanner.nextLine();
+        String stringIn;
 
         do {
             stringIn = scanner.nextLine();
         } while (!stringIn.equals("exit"));
+
+        System.out.println("Ввели: " + stringIn);
     }
 }

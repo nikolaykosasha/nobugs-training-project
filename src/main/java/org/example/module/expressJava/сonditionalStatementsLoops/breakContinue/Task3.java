@@ -22,11 +22,13 @@ public class Task3 {
             if (number < 0) {
                 continue;
             }
-            System.out.println(number);
 
             if (number == 0) {
                 break;
             }
+
+            System.out.println(number);
+
         }
     }
 }

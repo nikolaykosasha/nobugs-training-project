@@ -15,8 +15,10 @@ public class Task6 {
             System.out.println("Хорошо");
         } else if (number >= 60 && number <= 74) {
             System.out.println("Удовлетворительно");
+        } else if (number >= 0 && number <= 59) {
+            System.out.println("Неудовлетворительно");
         } else {
-            System.out.println("Число выходит за рамки бальной системы");
+            System.out.println("Выход за рамки системы оценки 0 - 100");
         }
     }
 }

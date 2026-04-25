@@ -9,10 +9,10 @@ public class Task2 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите пароль: ");
-        String inPassword = scanner.nextLine();
-
+        String inPassword;
         do {
             inPassword = scanner.nextLine();
         } while (!inPassword.equals(password));
+        System.out.println("Ввели: " + inPassword);
     }
 }

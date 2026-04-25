@@ -10,12 +10,12 @@ public class Task1 {
         int sum = 0;
 
         while (true) {
-            sum += number;
-
-            number = scanner.nextInt();
             if (number < 0) {
                 break;
             }
+            sum += number;
+
+            number = scanner.nextInt();
         }
         System.out.println(sum);
     }

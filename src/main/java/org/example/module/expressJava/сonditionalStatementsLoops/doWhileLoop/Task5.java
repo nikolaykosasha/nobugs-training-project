@@ -11,15 +11,10 @@ public class Task5 {
         int number = scanner.nextInt();
         int count = 0;
 
-
-        if (number != 0) {
-            do {
-                count++;
-                number = number / 10;
+        do {
+            number = number / 10;
+            count++;
             } while (number != 0);
             System.out.println(count);
-        } else {
-            System.out.println("0 не подходит");
         }
     }
-}
