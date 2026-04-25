@@ -18,7 +18,7 @@ public class Main {
         System.out.println(MathConstants.calculateCircumference(7.6));
         System.out.println(MathConstants.calculateExponentialGrowth(3.2, 5,25));
 
-        University.universityName = "МГУ";
+        University.setUniversityName("МГУ");
         University student1 = new University(1, "Петя");
         University student2 = new University(2, "Василий");
 
