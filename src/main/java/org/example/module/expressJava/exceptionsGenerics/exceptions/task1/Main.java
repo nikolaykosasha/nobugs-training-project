@@ -11,8 +11,7 @@ public class Main {
             try {
                 reader = new FileReader("data.txt");
             } catch (FileNotFoundException e) {
-                System.out.println("Файл не найден");
-                throw new RuntimeException(e);
+                System.err.println("Файл не найден: " + e.getMessage());
             }
         }
     }

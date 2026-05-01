@@ -7,7 +7,7 @@ package org.example.module.expressJava.exceptionsGenerics.generics.task1;
 public class Box<T> {
     private T type;
 
-    public void addType(T type) {
+    public void setType(T type) {
         this.type = type;
     }
 

@@ -5,9 +5,9 @@ public class Main {
         Person person = new Person("Василий", 160);
 
         try {
-            person.validityAge(person);
+            person.validityAge();
         } catch (UserAgeValidityException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());;
         }
     }
 }

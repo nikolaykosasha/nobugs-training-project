@@ -6,7 +6,7 @@ package org.example.module.expressJava.exceptionsGenerics.generics.task2;
 
 public class PrintBox {
 
-    public <T> void printArray(T[] array) {
+    public static <T> void printArray(T[] array) {
         for (T element : array) {
             System.out.println(element);
         }

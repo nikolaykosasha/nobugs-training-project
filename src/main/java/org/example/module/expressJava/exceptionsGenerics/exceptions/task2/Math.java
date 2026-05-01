@@ -6,14 +6,11 @@ public class Math {
 
     public int division(int a, int b) {
 
-        int result;
-        {
-            try {
-                result = a / b;
-            } catch (ArithmeticException e) {
-                throw new RuntimeException(e);
-            }
+        try {
+            return a / b;
+        } catch (ArithmeticException e) {
+            System.out.println("Ошибка: деление на ноль невозможно");
+            return 0;
         }
-        return result;
     }
 }

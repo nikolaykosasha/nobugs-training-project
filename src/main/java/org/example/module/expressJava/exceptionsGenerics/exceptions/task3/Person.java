@@ -9,7 +9,7 @@ public class Person {
         this.age = age;
     }
 
-    public boolean validityAge(Person person) throws UserAgeValidityException {
+    public boolean validityAge() throws UserAgeValidityException {
         if (this.age < 0 || this.age > 150) {
             throw new UserAgeValidityException("Возраст не может быть меньше 0 или больше 150");
         }
