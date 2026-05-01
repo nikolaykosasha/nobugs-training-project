@@ -1,6 +1,5 @@
 package org.example.module.expressJava.collectionsJava.tasks.linkedHashSet;
 
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 

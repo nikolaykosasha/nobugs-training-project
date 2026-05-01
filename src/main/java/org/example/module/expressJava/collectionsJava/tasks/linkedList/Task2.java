@@ -1,7 +1,7 @@
 package org.example.module.expressJava.collectionsJava.tasks.linkedList;
 
 import java.util.LinkedList;
-import java.util.List;
+import java.util.Queue;
 
 public class Task2 {
     public static void main(String[] args) {
@@ -11,14 +11,15 @@ public class Task2 {
         Добавьте 3 задачи и обработайте их в порядке поступления.
          */
 
-        List<String> taskList = new LinkedList<>();
+        Queue<String> taskList = new LinkedList<>();
 
-        taskList.addLast("Задача 1");
-        taskList.addLast("Задача 2");
-        taskList.addLast("Задача 3");
+        taskList.add("Задача 21");
+        taskList.add("Задача 1");
+        taskList.add("Задача 2");
 
-        taskList.getFirst();
+        while (!taskList.isEmpty()) {
 
-
+            taskList.poll();
+        }
     }
 }

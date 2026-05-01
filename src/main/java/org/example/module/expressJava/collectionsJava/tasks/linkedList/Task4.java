@@ -1,6 +1,6 @@
 package org.example.module.expressJava.collectionsJava.tasks.linkedList;
 
-import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Task4 {
@@ -11,7 +11,7 @@ public class Task4 {
         Напишите программу, которая вычисляет сумму элементов списка.
          */
 
-        List<Integer> list = Arrays.asList(34, 46, 67, 44, 1);
+        List<Integer> list = new LinkedList<>(List.of(34, 46, 67, 44, 1));
         int sum = 0;
 
         for (int n : list) {

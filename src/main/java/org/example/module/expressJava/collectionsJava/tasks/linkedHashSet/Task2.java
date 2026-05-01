@@ -9,7 +9,7 @@ public class Task2 {
      */
     Set<String> stringSet = new LinkedHashSet<>();
 
-    private void addSet(String string) {
+    public void addSet(String string) {
         stringSet.add(string);
     }
 }

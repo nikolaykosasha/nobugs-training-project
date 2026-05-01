@@ -10,10 +10,15 @@ public class Task3 {
         Реализуйте метод, который принимает List<String> и возвращает Set<String> без дубликатов
          */
 
-    List<String> list = Arrays.asList("Ы", "er");
-
-    private Set<String> addSett(List<String> list) {
+    public static Set<String> addSett(List<String> list) {
         return new HashSet<>(list);
 
+    }
+
+    public static void main(String[] args) {
+
+        List<String> list = Arrays.asList("Ы", "er");
+
+        Set result = Task3.addSett(list);
     }
 }
