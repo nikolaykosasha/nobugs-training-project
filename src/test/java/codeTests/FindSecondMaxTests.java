@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FindSecondMaxTests {
@@ -24,13 +25,13 @@ public class FindSecondMaxTests {
     }
 
     @Test
-    @DisplayName("Второе по величине число - Массив с одинаковыми числами")
-    void ArrayIdenticalNumbers() {
+    @DisplayName("Второе по величине число - Массив с повторяющимся максимумом")
+    void arrayWithDuplicateMax() {
         int[] array = {2, 5, 6, 4, 6};
 
         int actualResult = findSecondMax(array);
 
-        assert actualResult == 6;
+        assertEquals(5, actualResult);
     }
 
     @Test

@@ -3,10 +3,9 @@ package codeTests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class LineReversalTests {
 
@@ -17,33 +16,36 @@ public class LineReversalTests {
 
     @ParameterizedTest
     @DisplayName("Успешный разворот строки")
-    @ValueSource(strings = {"string", "Java", "12345"})
-    void CheckingReversePositiveTest(String strings) {
-        boolean actualResult = strings.equals(reverse(strings));
+    @CsvSource({
+            "string, gnirts",
+            "Java, avaJ",
+            "12345, 54321"
+    })
+    void checkingReversePositiveTest(String input, String expected) {
 
-        assertFalse(actualResult);
+        String actualResult = reverse(input);
+
+        assertEquals(expected, actualResult);
     }
 
     @Test
-    @DisplayName("Успешный разворот строки")
-    void CheckingReverseNullTest() {
-        String stringNull = null;
-        String s = reverse(stringNull);
+    @DisplayName("Разворот null строки")
+    void checkingReverseNullTest() {
 
-        boolean actualResult = s == null;
-
-        assertTrue(actualResult);
+        assertNull(reverse(null));
     }
 
-    @ParameterizedTest
+    @Test
     @DisplayName("Разворот пустой строки")
-    @ValueSource(strings = {""})
-    void CheckingReverseEmptyTest(String strings) {
+    void checkingReverseEmptyTest() {
 
-        String s = reverse(strings);
-        boolean actualResult = s.isEmpty();
+        assertEquals("", reverse(""));
+    }
 
-        assertTrue(actualResult);
+    @Test
+    @DisplayName("Разворот палиндрома")
+    void checkingReversePalindromeTest() {
+
+        assertEquals("level", reverse("level"));
     }
 }
-

@@ -6,7 +6,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FindMaxTests {
@@ -22,7 +24,7 @@ public class FindMaxTests {
         int[] array = {3, 5, 7, 2};
         int actualResult = findMax(array);
 
-        assert actualResult == ints;
+        assertEquals(ints, actualResult);
     }
 
     @ParameterizedTest
@@ -32,7 +34,7 @@ public class FindMaxTests {
         int[] array = {5};
         int actualResult = findMax(array);
 
-        assert actualResult == ints;
+        assertEquals(ints, actualResult);
     }
 
     @ParameterizedTest
@@ -42,7 +44,7 @@ public class FindMaxTests {
         int[] array = {-3, -5, -7, -2};
         int actualResult = findMax(array);
 
-        assert actualResult == ints;
+        assertEquals(ints, actualResult);
     }
 
     @Test
@@ -52,5 +54,16 @@ public class FindMaxTests {
         assertThrows(NullPointerException.class, () -> {
             findMax(null);
         }, "Checking if Null arr should lead to IllegalArgumentException");
+    }
+
+    @Test
+    @DisplayName("Пустой массив должен выбрасывать исключение")
+    void findMaxEmptyArrayTests() {
+
+        int[] array = {};
+
+        assertThrows(NoSuchElementException.class, () -> {
+            findMax(array);
+        });
     }
 }

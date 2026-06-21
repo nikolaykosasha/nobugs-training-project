@@ -3,6 +3,7 @@ package codeTests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,12 +21,19 @@ public class CheckingNumberOfVowels {
 
     @ParameterizedTest
     @DisplayName("Подсчёт количества гласных в строке")
-    @ValueSource(strings = {"hello", "java", "AEIOU"})
-    void CheckingNumberOfVowelsPositive(String strings) {
+    @CsvSource({
+            "hello, 2",
+            "java, 2",
+            "AEIOU, 5",
+            "'', 0",
+            "hll, 0",
+            "jv, 0"
+    })
+    void checkingNumberOfVowels(String input, int expected) {
 
-        boolean actualResult = countVowels(strings) > 0;
+        int actualResult = countVowels(input);
 
-        assertTrue(actualResult);
+        assertEquals(expected, actualResult);
     }
 
     @Test
@@ -39,10 +47,15 @@ public class CheckingNumberOfVowels {
 
     @ParameterizedTest
     @DisplayName("Подсчёт количества гласных в строке - нет гласных")
-    @ValueSource(strings = {"hll", "jv", ""})
-    void CheckingNumberOfVowelsNegative(String strings) {
-        boolean actualResult = countVowels(strings) >= 0;
+    @CsvSource({
+            "'', 0",
+            "hll, 0",
+            "jv, 0"
+    })
+    void CheckingNumberOfVowelsNegative(String input, int expected) {
 
-        assertTrue(actualResult);
+        int actualResult = countVowels(input);
+
+        assertEquals(expected, actualResult);
     }
 }
