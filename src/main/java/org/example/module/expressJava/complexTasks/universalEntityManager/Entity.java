@@ -1,6 +1,6 @@
 package org.example.module.expressJava.complexTasks.universalEntityManager;
 
-public class Entity {
+public abstract class Entity {
     private int age;
     private String name;
     private boolean isActive;

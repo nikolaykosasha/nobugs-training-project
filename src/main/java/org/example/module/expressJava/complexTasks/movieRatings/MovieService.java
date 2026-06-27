@@ -1,12 +1,13 @@
 package org.example.module.expressJava.complexTasks.movieRatings;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class MovieService {
-    private Map<Movie, List<Rating>> movieStorage;
+    private Map<Movie, List<Rating>> movieStorage = new HashMap<>();
+
+    public Map<Movie, List<Rating>> getMovieStorage() {
+        return movieStorage;
+    }
 
     public synchronized void addRating(Movie movieTitle, Rating rating) {
         checkedRating(rating);

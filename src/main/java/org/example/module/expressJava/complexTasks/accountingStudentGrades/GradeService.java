@@ -2,7 +2,6 @@ package org.example.module.expressJava.complexTasks.accountingStudentGrades;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class GradeService <T extends Number>{
     private List<StudentGrade<T>> gradeList = new ArrayList<>();
@@ -10,6 +9,10 @@ public class GradeService <T extends Number>{
     public synchronized void addGrade(StudentGrade studentGrade) {
         checkedAssessment(studentGrade);
         gradeList.add(studentGrade);
+    }
+
+    public List<StudentGrade<T>> getGradeList() {
+        return gradeList;
     }
 
     public double averageRating(String subject) {

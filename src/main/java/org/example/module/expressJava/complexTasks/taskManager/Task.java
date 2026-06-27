@@ -6,7 +6,14 @@ public class Task<T> {
     private int ID;
     private String status;
     private String priority;
-    private Date date;
+    private String date;
+
+    public Task(int ID, String status, String priority, String date) {
+        this.ID = ID;
+        this.status = status;
+        this.priority = priority;
+        this.date = date;
+    }
 
     public int getID() {
         return ID;
@@ -20,7 +27,7 @@ public class Task<T> {
         return priority;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 }

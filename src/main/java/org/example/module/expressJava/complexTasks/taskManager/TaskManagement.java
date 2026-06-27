@@ -1,9 +1,14 @@
 package org.example.module.expressJava.complexTasks.taskManager;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TaskManagement implements TaskService {
-    private List<Task> listTask;
+    private List<Task> listTask = new ArrayList<>();
+
+    public List<Task> getListTask() {
+        return listTask;
+    }
 
     @Override
     public void addTask(Task task) {
