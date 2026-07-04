@@ -7,6 +7,9 @@ public class Product {
     private String category;
 
     public Product(String name, int price, String category) {
+        this.name = name;
+        this.category = category;
+        this.price = price;
     }
 
     public String getName() {

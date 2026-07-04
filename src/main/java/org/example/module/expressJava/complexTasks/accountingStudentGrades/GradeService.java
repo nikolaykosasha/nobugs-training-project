@@ -25,7 +25,7 @@ public class GradeService <T extends Number>{
 
     private void checkedAssessment(StudentGrade studentGrade) {
 
-        if (studentGrade.getAssessment().intValue() < 0) {
+        if (studentGrade.getAssessment().doubleValue() < 0) {
             throw new InvalidGradeException("Оценка должна быть больше 0");
         }
     }

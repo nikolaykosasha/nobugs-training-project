@@ -1,21 +1,21 @@
 package org.example.module.expressJava.complexTasks.taskManager;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Task<T> {
-    private int ID;
+    private T ID;
     private String status;
     private String priority;
-    private String date;
+    private LocalDate date;
 
-    public Task(int ID, String status, String priority, String date) {
+    public Task(T ID, String status, String priority, LocalDate date) {
         this.ID = ID;
         this.status = status;
         this.priority = priority;
         this.date = date;
     }
 
-    public int getID() {
+    public T getID() {
         return ID;
     }
 
@@ -27,7 +27,7 @@ public class Task<T> {
         return priority;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 }

@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface TaskService<T> {
 
-    void addTask(Task task);
-    void removeTask(Task task);
-    List<Task> search(String status, String priority);
+    void addTask(Task<T> task);
+    void removeTask(T id);
+    List<Task<T>> search(String status, String priority);
 }

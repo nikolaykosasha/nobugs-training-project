@@ -15,23 +15,23 @@ public class EntityManager <T extends Entity> {
         return listEntity.remove(entity);
     }
 
-    public List<T> getListEntity() {
+    public synchronized List<T> getListEntity() {
         return List.copyOf(listEntity);
     }
 
-    public List<T> filterByAge(int min, int max) {
+    public synchronized List<T> filterByAge(int min, int max) {
       return listEntity.stream()
                 .filter(entity -> entity.getAge() >= min && entity.getAge() <= max)
                 .toList();
     }
 
-    public List<T> filterByName(String name) {
+    public synchronized List<T> filterByName(String name) {
         return listEntity.stream()
                 .filter(entity -> entity.getName().equals(name))
                 .toList();
     }
 
-    public List<T> filterByStatus(boolean status) {
+    public synchronized List<T> filterByStatus(boolean status) {
         return listEntity.stream()
                 .filter(entity -> entity.isActive() == status)
                 .toList();
