@@ -14,7 +14,7 @@ public class DiscountCalculator {
         } else if (hasCoupon) {
             discountRate = 0.07;
         } else {
-            discountRate = price * 0.02;
+            discountRate = 0.02;
         }
 
         return price * (1 - discountRate);
